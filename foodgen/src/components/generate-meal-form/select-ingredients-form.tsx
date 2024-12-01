@@ -33,7 +33,11 @@ export const SelectIngredientsForm: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="flex min-w-[600px] flex-col gap-4 rounded-lg bg-white p-8"
+    >
+      <h2 className="text-xl font-bold text-black">Select ingredients</h2>
       {/* Name Field */}
       <TextField
         {...register("name")}
