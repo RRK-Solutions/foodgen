@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <main className="bubbles flex h-[100vh] items-center justify-center text-white">
+    <main className="fluent-gradient flex h-[100vh] flex-col items-center justify-center gap-4 text-white">
       <p className="text-5xl font-bold">FOODGEN</p>
       <SelectIngredientsForm />
     </main>

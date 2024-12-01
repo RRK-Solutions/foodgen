@@ -2,47 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-.bubbles {
+.fluent-gradient {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  z-index: 0;
-  background: linear-gradient(to bottom, #1a2a6c, #b21f1f, #fdbb2d);
-}
-
-.bubbles::after,
-.bubbles::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.3) 10%,
-    transparent 20%
+  z-index: -1; /* Background behind content */
+  background: linear-gradient(
+    45deg,
+    #fff3e0,
+    /* Light Creamy Yellow */ #ffe0b2,
+    /* Soft Peachy Orange */ #ffd54f,
+    /* Lighter Yellow-Orange */ #ffc107,
+    /* Soft Yellow */ #fff3e0 /* Loop Back to Light Creamy Yellow */
   );
-  background-size: 50px 50px;
-  opacity: 0.4;
-  animation: moveBubbles 20s infinite linear;
+  background-size: 400% 400%; /* Smooth blending */
+  animation: gradientShift 15s ease infinite; /* Infinite animation */
 }
 
-.bubbles::before {
-  animation-delay: 10s;
-  background-size: 100px 100px;
-}
-
-/* Bubbles animation */
-@keyframes moveBubbles {
+@keyframes gradientShift {
   0% {
-    transform: translateY(0) translateX(0);
+    background-position: 0% 50%;
   }
   50% {
-    transform: translateY(-20%) translateX(5%);
+    background-position: 100% 50%;
   }
   100% {
-    transform: translateY(-100%) translateX(-10%);
+    background-position: 0% 50%;
   }
 }
