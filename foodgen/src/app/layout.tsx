@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 
 import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Create T3 App",
@@ -14,7 +15,56 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
-      <body>{children}</body>
+      <body className="fluent-gradient flex min-h-screen flex-col">
+        {/* Header */}
+        <header className="bg-yellow-100 py-2">
+          <div className="container mx-auto flex items-center justify-between px-6">
+            <Link href={"/"} className="text-3xl font-bold text-yellow-800">
+              FOODGEN
+            </Link>
+            <nav>
+              <ul className="flex space-x-6">
+                <li>
+                  <Link
+                    href="/generate"
+                    className="text-yellow-700 hover:text-yellow-900"
+                  >
+                    Generate meal
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/about"
+                    className="text-yellow-700 hover:text-yellow-900"
+                  >
+                    About
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/contact"
+                    className="text-yellow-700 hover:text-yellow-900"
+                  >
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+
+        {/* Main Content */}
+        <main className="flex flex-grow flex-col items-center justify-center">
+          {children}
+        </main>
+
+        {/* Footer */}
+        <footer className="bg-yellow-100">
+          <div className="container mx-auto py-4 text-center text-yellow-700">
+            © {new Date().getFullYear()} FOODGEN. All rights reserved.
+          </div>
+        </footer>
+      </body>
     </html>
   );
 }
