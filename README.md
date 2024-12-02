@@ -7,9 +7,11 @@
  Marián Rohun
  Branislav Roman
 
-## Functional requirements
+## EA model
+
+### Functional requirements
 ![image](https://github.com/user-attachments/assets/bb1e114b-611d-4104-b879-4671824b4fab)
-## Business process model
+### Business process model
 ![image](https://github.com/user-attachments/assets/08091a51-8f6f-4723-a23e-b595c3ac8abc)
-## Activity diagram
+### Activity diagram
 ![image](https://github.com/user-attachments/assets/5949b4ee-d90b-4464-a902-41c208629bf4)
