@@ -12,3 +12,4 @@
 ## Business process model
 ![image](https://github.com/user-attachments/assets/08091a51-8f6f-4723-a23e-b595c3ac8abc)
 ## Activity diagram
+![image](https://github.com/user-attachments/assets/5949b4ee-d90b-4464-a902-41c208629bf4)
