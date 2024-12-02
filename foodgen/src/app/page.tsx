@@ -25,30 +25,12 @@ export default function HomePage() {
         <h3 className="mb-6 text-center text-3xl font-bold text-yellow-800">
           Features
         </h3>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-          <div className="rounded-lg bg-yellow-100 p-6 text-center shadow-lg">
+        <div className="flex items-center justify-center">
+          <div className="rounded-lg bg-yellow-100 p-6 px-8 text-center shadow-lg">
             <h4 className="text-2xl font-bold text-yellow-800">
-              AI-Powered Recipes
+              AI-Powered meals
             </h4>
-            <p className="mt-2 text-yellow-700">
-              Generate unique recipes based on your favorite ingredients.
-            </p>
-          </div>
-          <div className="rounded-lg bg-yellow-100 p-6 text-center shadow-lg">
-            <h4 className="text-2xl font-bold text-yellow-800">
-              Custom Diet Plans
-            </h4>
-            <p className="mt-2 text-yellow-700">
-              Create meal plans tailored to your dietary preferences.
-            </p>
-          </div>
-          <div className="rounded-lg bg-yellow-100 p-6 text-center shadow-lg">
-            <h4 className="text-2xl font-bold text-yellow-800">
-              Instant Suggestions
-            </h4>
-            <p className="mt-2 text-yellow-700">
-              Explore trending dishes and crowd favorites instantly.
-            </p>
+            <p className="mt-2 text-yellow-700">Select ingredients and cook!</p>
           </div>
         </div>
       </section>

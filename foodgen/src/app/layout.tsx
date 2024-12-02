@@ -54,7 +54,7 @@ export default function RootLayout({
         </header>
 
         {/* Main Content */}
-        <main className="flex flex-grow flex-col items-center justify-center">
+        <main className="flex flex-grow flex-col items-center justify-center py-8">
           {children}
         </main>
 
