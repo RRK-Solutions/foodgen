@@ -19,9 +19,14 @@ export default function RootLayout({
         {/* Header */}
         <header className="bg-yellow-100 py-2">
           <div className="container mx-auto flex items-center justify-between px-6">
-            <Link href={"/"} className="text-3xl font-bold text-yellow-800">
-              FOODGEN
-            </Link>
+            <div className="flex items-end gap-1">
+              <Link href={"/"} className="text-3xl font-bold text-yellow-800">
+                FOODGEN
+              </Link>
+              <p className="pb-[2px] font-semibold text-yellow-700">
+                by RRK Solutions
+              </p>
+            </div>
             <nav>
               <ul className="flex space-x-6">
                 <li>
@@ -54,7 +59,7 @@ export default function RootLayout({
         </header>
 
         {/* Main Content */}
-        <main className="flex flex-grow flex-col items-center justify-center py-8">
+        <main className="flex flex-grow flex-col items-center justify-center py-0 sm:py-8">
           {children}
         </main>
 

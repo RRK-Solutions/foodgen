@@ -54,8 +54,6 @@ export async function fetchChatGPTResponse(prompt: string): Promise<string> {
   const apiKey = process.env.NEXT_PUBLIC_OPENAI_API_KEY; // Replace with your OpenAI API Key
   const endpoint = "https://api.openai.com/v1/chat/completions";
 
-  console.log("API Key:", apiKey);
-
   try {
     const response = await fetch(endpoint, {
       method: "POST",

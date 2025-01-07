@@ -34,7 +34,7 @@ export default function AboutPage() {
         <h3 className="mb-6 text-3xl font-bold text-yellow-800">
           Why Choose FOODGEN?
         </h3>
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-3">
           <div className="rounded-lg bg-yellow-100 p-6 px-8 shadow-lg">
             <h4 className="text-2xl font-bold text-yellow-800">
               Custom Recipes
@@ -108,7 +108,7 @@ export default function AboutPage() {
           ingredients into culinary masterpieces.
         </p>
         <Link href={"/generate"}>
-          <button className="rounded-lg bg-yellow-600 px-6 py-3 text-white hover:bg-yellow-700">
+          <button className="mt-8 h-20 rounded-lg bg-yellow-600 px-20 py-3 text-3xl text-white hover:bg-yellow-700">
             Get Started
           </button>
         </Link>
