@@ -16,18 +16,11 @@ export const ContactPage = () => {
           your questions.
         </p>
         <div className="flex flex-col items-center gap-3 md:flex-row md:justify-center">
-          <div className="flex flex-col items-start">
-            <h3 className="text-lg font-semibold">Address</h3>
-            <p>1234 RRK Ave., Suite 100</p>
-            <p>Bratislava, Slovakia 80100</p>
-          </div>
-          <div className="mt-4 border-l-2 border-yellow-600 px-4 md:mt-0">
-            <h3 className="text-lg font-semibold">Phone</h3>
-            <p>+421 987 654 321</p>
-          </div>
-          <div className="mt-4 border-l-2 border-yellow-600 px-4 md:mt-0">
-            <h3 className="text-lg font-semibold">Email</h3>
-            <p>info@rrk-solutions.com</p>
+          <div className="mt-4 px-4 md:mt-0">
+            <h3 className="text-lg font-semibold">Emails</h3>
+            <p>xkyjovsky@stuba.sk</p>
+            <p>xroman@stuba.sk</p>
+            <p>xrohun@stuba.sk</p>
           </div>
         </div>
       </section>
@@ -59,8 +52,8 @@ export const ContactPage = () => {
             className="bg-white"
             required
           />
-          <Button type="submit" variant="contained" color="warning">
-            Submit
+          <Button disabled type="submit" variant="contained" color="warning">
+            Development in progress
           </Button>
         </form>
       </section>

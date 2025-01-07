@@ -128,6 +128,7 @@ export const GeneratePage = () => {
       const reply = await fetchChatGPTResponse(prompt);
       // Parse and store JSON response
       const parsedResponse = JSON.parse(reply);
+      console.log(parsedResponse);
       setResponse(parsedResponse);
     } catch (error: any) {
       setResponse({ error: error.message ?? "Failed to fetch response." });
@@ -221,14 +222,15 @@ export const GeneratePage = () => {
         </Button>
 
         {/* Display the response */}
-        {response?.lunch && (
-          <div className="mt-6 w-full rounded-md bg-yellow-100 p-4 text-yellow-800">
-            <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
-              Generated Meal:
-            </Typography>
-            <FoodCard meal={response.lunch} />
-          </div>
-        )}
+        {response?.lunch ||
+          (response?.breakfast && (
+            <div className="mt-6 w-full rounded-md bg-yellow-100 p-4 text-yellow-800">
+              <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
+                Generated Meal:
+              </Typography>
+              <FoodCard meal={response.lunch ?? response?.breakfast} />
+            </div>
+          ))}
 
         {response?.error && (
           <Typography variant="body2" color="error" className="mt-4">

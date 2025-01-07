@@ -39,6 +39,14 @@ export default function RootLayout({
                 </li>
                 <li>
                   <Link
+                    href="/fridge"
+                    className="text-yellow-700 hover:text-yellow-900"
+                  >
+                    Fridge
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     href="/about"
                     className="text-yellow-700 hover:text-yellow-900"
                   >

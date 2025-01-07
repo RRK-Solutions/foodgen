@@ -355,14 +355,15 @@ export default function FridgePage() {
         </Button>
 
         {/* Display the ChatGPT response */}
-        {response?.lunch && (
-          <div className="mt-6 w-full rounded-md bg-yellow-100 p-4 text-yellow-800">
-            <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
-              Generated Meal:
-            </Typography>
-            <FoodCard meal={response.lunch} />
-          </div>
-        )}
+        {response?.lunch ||
+          (response?.breakfast && (
+            <div className="mt-6 w-full rounded-md bg-yellow-100 p-4 text-yellow-800">
+              <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
+                Generated Meal:
+              </Typography>
+              <FoodCard meal={response.lunch ?? response?.breakfast} />
+            </div>
+          ))}
         {response?.error && (
           <Typography variant="body2" color="error" className="mt-4">
             {response.error}

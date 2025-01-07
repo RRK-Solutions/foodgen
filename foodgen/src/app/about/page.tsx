@@ -83,17 +83,19 @@ export default function AboutPage() {
             href="https://www.youtube.com/@RRK-solutions"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-lg bg-yellow-600 px-6 py-3 text-white hover:bg-yellow-700"
+            className="flex items-center gap-2 rounded-lg bg-red-600 px-6 py-3 text-white hover:bg-red-700"
           >
             <FaYoutube className="h-6 w-6" />
+            <span className="hidden sm:inline">YouTube</span>
           </a>
           <a
             href="https://www.linkedin.com/company/rrk-solutions"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-lg bg-yellow-600 px-6 py-3 text-white hover:bg-yellow-700"
+            className="flex items-center gap-2 rounded-lg bg-blue-700 px-6 py-3 text-white hover:bg-blue-800"
           >
             <FaLinkedin className="h-6 w-6" />
+            <span className="hidden sm:inline">LinkedIn</span>
           </a>
         </div>
       </section>
